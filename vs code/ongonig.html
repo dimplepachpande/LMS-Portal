@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Courses</title>
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Body and Header */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg,white);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        header {
+            background-color: #008080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #008080;
+        }
+
+        /* Section */
+        .section {
+            padding: 20px;
+        }
+
+        /* Course Cards */
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .course-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .course-card:nth-child(1) { animation-delay: 0.2s; }
+        .course-card:nth-child(2) { animation-delay: 0.4s; }
+        .course-card:nth-child(3) { animation-delay: 0.6s; }
+        .course-card:nth-child(4) { animation-delay: 0.8s; }
+
+        /* Card Content */
+        .course-card h3 {
+            margin: 10px 0;
+            color: #007BFF;
+        }
+        .course-card p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        /* Learn More Button */
+        .learn-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .learn-more:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ongoing Courses</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Courses</a>
+        <a href="upcoming_courses.html">Upcoming Courses/Workshops Section</a>
+        <a href="ongoing_courses.html">Ongoing Courses</a>
+    </nav>
+
+    <section class="section">
+        <div class="course-container">
+            <div class="course-card">
+                <h3>JAVA
+                    Fundamentals
+                    </h3>
+                    <img src="java fundamentals.png" alt="JAVA Fundamentals" style="width:100%; height:auto; border-radius:5px; margin-bottom:10px;">
+                <p>Duration</p>
+                <p>₹999</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h3>Placement Prepration in Java</h3>
+                <img src="placement prepartion.png" alt="Placement Prepration in Java" style="width:100%; height:auto; border-radius:5px; margin-bottom:10px;">
+                <p>Duration</p>
+                <p>₹4999</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h3>Full Stack Web Development</h3>
+                <img src="full stack development.png" alt="Full Stack Development" style="width:100%; height:160px; border-radius:5px; margin-bottom:10px;">
+                <p>Duration</p>
+                <p>₹7999</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h3>Mobile App Development</h3>
+                <img src="mobile app development.png" alt="Mobile App Development" style="width:100%; height:auto; border-radius:5px; margin-bottom:10px;">
+                <p>Duration</p>
+                <p>₹4999</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
